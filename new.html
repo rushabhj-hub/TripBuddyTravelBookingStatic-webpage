@@ -1,0 +1,35 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table</title>
+
+<script type="text/javascript">
+	
+	var rows = prompt("Enter number of rows : ");
+	var cols = prompt("Enter number of columns : ");
+	
+	createTable(rows,cols);
+	
+	function createTable(rows,cols){
+		var j= 1;
+		var op = "<table border='1' width='500' >";
+
+		for(var i=1;i<=rows;i++){
+			op = op + "<tr>";
+			while(j<=cols){
+				op = op + "<td>" + i*j + "</td>";
+				j++;
+			}
+			op = op + "</tr>";
+			j = 1;
+		}
+		op = op + "</table>";
+		document.write(op);
+	}
+	
+</script>
+
+</head>
+<body>
+</body>
+</html>
